@@ -1,3 +1,7 @@
 fileignoreconfig:
-- filename: .devcontainer/scripts/docker-debian.sh
-  checksum: 3109be3be53c3dad4a7cfcd0c07c87cd41ab26cc24e1fd4110fe69ecb955ae9a
+- filename: templates/userdata-debug.yml.tpl
+  checksum: b6fcd0cb8b9c6c872898f860e67e49a6b935e31b31bda519e350e081c8553149
+- filename: examples/main.tf
+  checksum: ff941b43da2bf4ce9f2f129ccdc391d6115febb18b3ff3e4b0b169e53211d715
+- filename: main.tf
+  checksum: 61daf572bd2aa19597bd065fc111674c193d9cb395b0644942fd5892cffd56ad

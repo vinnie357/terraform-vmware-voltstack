@@ -1,0 +1,127 @@
+#====================#
+# vCenter connection #
+#====================#
+vsphere_datacenter = ""
+vsphere_folder_env = "dev"
+site_token = "mysite-token"
+vsphere_user = "svc-terraform@domain.com"
+vsphere_password = ""
+vsphere_vcenter = "myvcenter.domain.com"
+vsphere_unverified_ssl = true
+#===============#
+# volterra site #
+#===============#
+ves_site_token   = "my-ves-site-token"
+ves_cluster_name = "my-cluster-vmware"
+site_latitude = "29.8977873"
+site_longitude = "-81.3147739"
+#ves_hardware     = "vmware-multi-nic-voltstack-combo"
+ves_hardware     = "vmware-voltstack-combo"
+#==========================#
+# vSphere virtual machines #
+#==========================#
+# single
+vm_config = {
+  voltstack-0 = {
+    vm_domain           = "my-domain.com"
+    vsphere_cluster     = "my-cluster"
+    vm_datastore        = "my-datastore1"
+    vm_cpu              = "4"
+    vm_ram              = "16384"
+    vm_disk0_size       = "40"
+    vm_networks = {
+      eth0 = "192.168.1.0"
+    }
+    vm_template         = "voltstack-1nic"
+    vm_linked_clone     = "false"
+    # leave unset for dhcp
+    vm_ip               = ""
+    vm_dns_0            = ""
+    vm_dns_1            = ""
+    default_route_destination = ""
+    # set for static
+    #vm_ip               = "192.168.1.187/24"
+    #vm_dns_0            = "192.168.3.1"
+    #vm_dns_1            = "192.168.2.251"
+    #default_public_gateway    = "192.168.2.254"
+    #default_route_destination = "0.0.0.0/0"
+  }
+}
+// # cluster
+// vm_config = {
+//   voltstack-0 = {
+//     vm_domain           = "my-domain.com"
+//     vsphere_cluster     = "my-cluster"
+//     vm_datastore        = "my-datastore1"
+//     vm_cpu              = "4"
+//     vm_ram              = "16384"
+//     vm_disk0_size       = "40"
+//     vm_networks = {
+//       eth0 = "192.168.1.0"
+//       eth1 = "192.168.3.0"
+//     }
+//     vm_template         = "voltstack-2nic"
+//     vm_linked_clone     = "false"
+//     # leave unset for dhcp
+//     vm_ip               = ""
+//     vm_dns_0            = ""
+//     vm_dns_1            = ""
+//     default_route_destination = ""
+//     # set for static
+//     #vm_ip               = "192.168.1.187/24"
+//     #vm_dns_0            = "192.168.3.1"
+//     #vm_dns_1            = "192.168.2.251"
+//     #default_public_gateway    = "192.168.2.254"
+//     #default_route_destination = "0.0.0.0/0"
+//   },
+//   voltstack-1 = {
+//     vm_domain           = "my-domain.com"
+//     vsphere_cluster     = "my-cluster"
+//     vm_datastore        = "my-datastore1"
+//     vm_cpu              = "4"
+//     vm_ram              = "16384"
+//     vm_disk0_size       = "40"
+//     vm_networks = {
+//       eth0 = "192.168.1.0"
+//       eth1 = "192.168.3.0"
+//     }
+//     vm_template         = "voltstack-2nic"
+//     vm_linked_clone     = "false"
+//     # leave unset for dhcp
+//     vm_ip               = ""
+//     vm_dns_0            = ""
+//     vm_dns_1            = ""
+//     default_route_destination = ""
+//     # set for static
+//     #vm_ip               = "192.168.1.188/24"
+//     #vm_dns_0            = "192.168.3.1"
+//     #vm_dns_1            = "192.168.2.251"
+//     #default_public_gateway    = "192.168.2.254"
+//     #default_route_destination = "0.0.0.0/0"
+//   },
+//   voltstack-2 = {
+//     vm_domain           = "my-domain.com"
+//     vsphere_cluster     = "my-cluster"
+//     vm_datastore        = "my-datastore1"
+//     vm_cpu              = "4"
+//     vm_ram              = "16384"
+//     vm_disk0_size       = "40"
+//     vm_networks = {
+//       eth0 = "192.168.1.0"
+//       eth1 = "192.168.3.0"
+//     }
+//     vm_template         = "voltstack-2nic"
+//     vm_linked_clone     = "false"
+//     # leave unset for dhcp
+//     vm_ip               = ""
+//     vm_dns_0            = ""
+//     vm_dns_1            = ""
+//     default_route_destination = ""
+//     # set for static
+//     #vm_ip               = "192.168.1.189/24"
+//     #vm_dns_0            = "192.168.3.1"
+//     #vm_dns_1            = "192.168.2.251"
+//     #default_public_gateway    = "192.168.2.254"
+//     #default_route_destination = "0.0.0.0/0"
+//   }
+// }
