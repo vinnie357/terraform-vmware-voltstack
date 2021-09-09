@@ -1,6 +1,16 @@
-# repository_template
-base repository template using f5-devops-containers
+# terraform vmware voltstack module
+module for deploying volterra stack in vmware
 ---
+
+## running
+```bash
+. init.sh
+cd examples
+# load the ovas as templates to vcenter
+cp admin.auto.tfvars.example admin.auto.tfvars
+## edit vars
+setup
+```
 
 includes:
 - pre-commit
